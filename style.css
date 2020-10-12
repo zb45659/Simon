@@ -4,19 +4,19 @@ body {
 }
 
 .buttons {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     display: inline-block;
     cursor: pointer;
 }
 
-/* .active {
-    background-color: whitesmoke;
-} */
+.cantClick {
+    pointer-events: none;
+}
 .red {
     border-top-right-radius: 100%;
     background-color: #900000 ;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 15px;
 }
 .red.flash {
     background-color: #FF0000 ;
@@ -25,7 +25,7 @@ body {
 .green {
     border-top-left-radius: 100%;
     background-color: #003300;
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 0;
 }
 .green.flash {
     background-color: green;
@@ -34,7 +34,7 @@ body {
 .blue {
     border-bottom-right-radius: 100%;
     background-color: #000066;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 15px;
 }
 .blue.flash{
     background-color: blue;
@@ -43,36 +43,70 @@ body {
 .yellow {
     border-bottom-left-radius: 100%;
     background-color: #CCCC00;
-    margin: 0 10px 0 0;
+    margin: 0 15px 0 0;
 }
 
 .yellow.flash{
     background-color: yellow;
 }
 .row1 {
-    padding: 35px 0 10px 0;
+    padding: 52px 0 15px 0;
 }
 
 .row2 {
-    padding: 10px 0 35px 0;
+    padding: 15px 0 52px 0;
 }
 
-.container {
+#container {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 750px;
+    height: 750px;
+    margin: -100px 0 0 100px;
     border-radius: 50%;
     background-color: black;
     display: inline-block;
 }
 .middle {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: black;
     display: inline-block;
     top: 50%;
     left: 50%;
-    margin: -100px 0 0 -100px; 
+    margin: -150px 0 0 -150px; 
+}
+
+.scoreBoard {
+    border-style: solid;
+    border-width: 9px;
+    border-color: #3c4038;
+    background-color: #30001d;
+    border-radius: 30px;
+    width: 150px;
+    height: 60px;
+    margin-left: 40px;
+    margin-top: -20px;
+    text-align: center;
+    font-family: "digital-clock-font";
+    font-size: 90px;
+    color: red;
+    padding: 0px 0px 40px 0px;
+  }
+.score {
+    font-family: "digital-clock-font";
+    font-size: 35px;
+    margin-left: 65px;
+    margin-top: 10px;
+    text-align: left;
+}
+.title h1{
+    text-align: center;
+    font-family: "League-Gothic", Courier;
+    font-size: 175px;
+    margin: 0 150px 50px 0;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 10px 10px 0 green, 20px 20px 0 red, 30px 30px 0 #ffd217, 40px 40px 0 blue;
 }
