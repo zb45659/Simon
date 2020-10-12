@@ -1,16 +1,36 @@
-// let buttons = document.querySelectorAll(".buttons")
-// let green = document.getElementById("green")[0];
-// let red = document.getElementById("red")[0];
-// let yellow = document.getElementById("yellow")[0];
-// let blue = document.getElementById("blue")[0];
+// let green = document.getElementsByClassName("green");
+// let red = document.getElementByClassName("red");
+// let yellow = document.getElementByClassName("yellow");
+// let blue = document.getElementByClassName("blue");
 const startButton = document.querySelector(".start");
 
 let sequence = [];
-let userSequence = [];
 let level = 0;
+let userSequence = [];
+const nextSequence = [];
+let buttons = document.querySelectorAll(".buttons")
+
+function addSequence(btn) {
+    userSequence.push(btn.getAttribute('data-button'));
+    console.log(userSequence);
+
+
+    // console.log(btn.getAttribute('data-button'));
+};
+
+
+
+function buttonClicked() {
+    for (let i = 0; i < buttons.length; i++){
+        buttons[i].onclick = function() {
+            addSequence(this);
+        }
+    }
+}
+
 
 function activateButton(color) {
-    const button = document.querySelector(`[data-tile='${color}']`);
+    const button = document.querySelector(`[data-button='${color}']`);
     
     button.classList.add('flash');
     
@@ -19,8 +39,8 @@ function activateButton(color) {
     }, 500);    
 }
 
-function playLevel(nextSequence) {
-    nextSequence.forEach((color, index) => {
+function playLevel(newSequence) {
+    newSequence.forEach((color, index) => {
         setTimeout(() => {
             activateButton(color);
         }, (index + 1) * 500);
@@ -36,14 +56,13 @@ function randomStep() {
 function nextLevel() {
     level += 1;
     //array used to store current sequence + new Sequence
-    const nextSequence = [];
     nextSequence.push(randomStep());
     playLevel(nextSequence);
+    console.log(nextSequence)
 }
 function startGame() {
     nextLevel();
 }
-
 
 startButton.addEventListener('click',startGame);
 
