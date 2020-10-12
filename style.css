@@ -13,28 +13,41 @@ body {
 /* .active {
     background-color: whitesmoke;
 } */
-#red {
+.red {
     border-top-right-radius: 100%;
-    background-color: red;
+    background-color: #900000 ;
     margin: 0 0 0 10px;
 }
+.red.flash {
+    background-color: #FF0000 ;
+}
 
-#green {
+.green {
     border-top-left-radius: 100%;
-    background-color: green;
+    background-color: #003300;
     margin: 0 10px 0 0;
 }
+.green.flash {
+    background-color: green;
+}
 
-#blue {
+.blue {
     border-bottom-right-radius: 100%;
-    background-color: blue;
+    background-color: #000066;
     margin: 0 0 0 10px;
 }
+.blue.flash{
+    background-color: blue;
+}
 
-#yellow {
+.yellow {
     border-bottom-left-radius: 100%;
-    background-color: yellow;
+    background-color: #CCCC00;
     margin: 0 10px 0 0;
+}
+
+.yellow.flash{
+    background-color: yellow;
 }
 .row1 {
     padding: 35px 0 10px 0;
