@@ -8,14 +8,7 @@ let startButton = document.querySelector(".start");
 let sequence = [];
 let userSequence = [];
 let level = 0;
-const buttons = [green,red,yellow,blue];
-const random = buttons[Math.floor(Math.random() * buttons.length)];
 
-function activateButton(btn) {
-    // setInterval(function() {
-        btn.style.backgroundColor = "white";
-
-    }
 
 
 function startGame() {
@@ -23,12 +16,43 @@ function startGame() {
 }
 
 
+function activateButton(color) {
+    const button = document.querySelector(`[data-tile='${color}']`);
+
+    button.classList.add('flash');
+
+    setTimeout(() => {
+        button.classList.remove('flash');
+    }, 500);    
+}
+
+function playLevel(nextSequence) {
+    nextSequence.forEach((color, index) => {
+        setTimeout(() => {
+            activateButton(color);
+        }, (index = 1) * 500);
+    });
+}
+
+
+
+
+
+function randomStep() {
+    const buttons = ['green','red','yellow','blue'];
+    const random = buttons[Math.floor(Math.random() * buttons.length)];
+    return random;
+}
+
 function nextLevel() {
     level += 1;
+    //array used to store current sequence + new Sequence
+    const nextSequence = [];
+    nextSequence.push(randomStep());
 }
 startButton.addEventListener('click',startGame);
 
-activateButton(random);
+// activateButton(random);
 // console.log(green);
 
 
