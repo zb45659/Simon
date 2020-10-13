@@ -3,6 +3,15 @@ body {
     text-align: center;
 }
 
+.title h1{
+    text-align: center;
+    font-family: "League-Gothic", Courier;
+    font-size: 175px;
+    margin: 0 150px 50px 0;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 10px 10px 0 green, 20px 20px 0 red, 30px 30px 0 #ffd217, 40px 40px 0 blue;
+}
 .buttons {
     display: inline-block;
     position: relative;
@@ -83,7 +92,26 @@ body {
     margin: -130px 0 0 -135px;
     border: 12px solid black; 
 }
-
+.gameButtons{
+    width: 220px;
+    height: 90px;
+    margin: 85px 0 0 10px;
+}
+.score{
+    display: inline-block;
+}
+.label {
+    font-family: "digital-clock-font";
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 45px;
+}
+.scoreLabel {
+    font-family: "digital-clock-font";
+    font-size: 0.8em;
+    text-align: center;
+    margin: 5px 0 0 -10px;
+}
 .scoreBoard {
     position: relative;
     border-style: solid;
@@ -91,43 +119,27 @@ body {
     border-color: #3c4038;
     background-color: #30001d;
     border-radius: 13px;
-    width: 62px;
-    height: 24px;
-    margin-left: 25px;
-    margin-top: -65px;
+    width: 40px;
+    height: 25px;
+    margin: 0 15px 0 0;
     text-align: center;
     font-family: "digital-clock-font";
-    font-size: 38px;
+    font-size: 30px;
     color: red;
-    padding: 0px 0px 16px 0px;
+    padding: 0px 0px 14px 0px;
   }
-.score {
-    position: relative;
-    font-family: "digital-clock-font";
-    font-size: 18px bold;
-    margin-left: 32px;
-    margin-top: 3px;
-    text-align: left;
-}
-.title h1{
-    text-align: center;
-    font-family: "League-Gothic", Courier;
-    font-size: 175px;
-    margin: 0 150px 50px 0;
-    text-transform: uppercase;
-    color: black;
-    text-shadow: 10px 10px 0 green, 20px 20px 0 red, 30px 30px 0 #ffd217, 40px 40px 0 blue;
-}
+
 .startButton {
     display: inline-block;
     position: relative;
-    margin: 85px 0 0 75px;
-    width : 60px;
-    height : 60px;
+    width : 32px;
+    height : 32px;
     background-color : red;
     border-radius : 100%;
     border : 8px solid black;
     box-shadow : 0px 4px 6px #222;
-    top : -5px;
-    text-align: center;
+  }
+  .reset {
+    background-color: yellow;
+    margin: 0 0 0 15px;
   }

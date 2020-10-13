@@ -4,17 +4,18 @@
 // let blue = document.getElementByClassName("blue");
 let container = document.querySelector("#container");
 let startButton = document.querySelector(".startButton");
+let resetButton = document.querySelector(".reset");
+let buttons = document.querySelectorAll(".buttons");
+let scoreBoard = document.querySelector(".scoreBoard");
 let level = 0;
 let userSequence = [];
 let nextSequence = [];
-let buttons = document.querySelectorAll(".buttons");
-let scoreBoard = document.querySelector(".scoreBoard");
 
 function resetGame() {
-    alert("You have lost, try again!");
     userSequence = [];
     nextSequence = [];
     level = 0;
+    scoreBoard.textContent = level;
     container.setAttribute("class","cantClick");
 }
 
@@ -33,7 +34,10 @@ function addSequence(btn) {
         if (JSON.stringify(userSequence) == JSON.stringify(nextSequence)) {
             console.log("Good job, keep going")
             nextLevel()
-        } else {resetGame()};
+        } else {
+            resetGame();
+            alert("You have lost, try again!");
+        }
     } else {console.log("more buttons needed")};
 }
 
@@ -62,7 +66,7 @@ function playLevel(newSequence) {
         }, (index + 1) * 1500);
         setTimeout(() => {
             container.classList.remove("cantClick");
-            }, (index +2) * 2500);
+            }, (index +1) * 2500);
     });
     
         
@@ -88,10 +92,13 @@ function nextLevel() {
     }
 
 function startGame() {
+    if (level == 0) {
     nextLevel();
+} else {console.log("Game already going!");
+}
 }
 
 startButton.addEventListener('click',startGame);
-
+resetButton.addEventListener('click', resetGame);
 // activateButton(random);
 // console.log(green);
