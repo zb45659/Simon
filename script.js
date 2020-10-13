@@ -24,11 +24,15 @@ function resetGame() {
 function addSequence(btn) {
     userSequence.push(btn.getAttribute('data-button'));
     btn.classList.add('flash');
-    
+    // console.log(btn.dataset.button);
+
+    const soundClick = document.querySelector(`[data-sound='${btn.dataset.button}']`);
+    soundClick.play();
+
     setTimeout(() => {
         btn.classList.remove('flash');
     }, 250); 
-    console.log(userSequence);
+    // console.log(userSequence);
     
     if (userSequence.length == nextSequence.length) { 
         if (JSON.stringify(userSequence) == JSON.stringify(nextSequence)) {
@@ -51,9 +55,11 @@ function buttonClicked() {
 
 function activateButton(color) {
     const button = document.querySelector(`[data-button='${color}']`);
-    
+    const sound = document.querySelector(`[data-sound='${color}']`);
+    // console.log(color);
     button.classList.add('flash');
-    
+    sound.play();
+
     setTimeout(() => {
         button.classList.remove('flash');
     }, 1000);    
@@ -87,7 +93,7 @@ function nextLevel() {
         //array used to store current sequence + new Sequence
         nextSequence.push(randomStep());
         playLevel(nextSequence);
-        console.log(nextSequence)
+        // console.log(nextSequence)
         // } else {resetGame()};
     }
 
