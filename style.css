@@ -4,12 +4,17 @@ body {
 }
 
 .buttons {
-    width: 300px;
-    height: 300px;
     display: inline-block;
+    position: relative;
+    width: 240px;
+    height: 240px;
     cursor: pointer;
 }
 
+.click{
+    pointer-events: auto;
+    cursor: pointer;
+}
 .cantClick {
     pointer-events: none;
 }
@@ -50,7 +55,7 @@ body {
     background-color: yellow;
 }
 .row1 {
-    padding: 52px 0 15px 0;
+    padding: 45px 0 15px 0;
 }
 
 .row2 {
@@ -58,47 +63,50 @@ body {
 }
 
 #container {
-    position: relative;
-    width: 750px;
-    height: 750px;
-    margin: -100px 0 0 100px;
-    border-radius: 50%;
-    background-color: black;
     display: inline-block;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    margin: 0px 120px 0px 0px;
+    border-radius: 100%;
+    background-color: black;
 }
 .middle {
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: black;
     display: inline-block;
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    border-radius: 100%;
+    background-color: #757177;
     top: 50%;
     left: 50%;
-    margin: -150px 0 0 -150px; 
+    margin: -130px 0 0 -135px;
+    border: 12px solid black; 
 }
 
 .scoreBoard {
+    position: relative;
     border-style: solid;
-    border-width: 9px;
+    border-width: 4px;
     border-color: #3c4038;
     background-color: #30001d;
-    border-radius: 30px;
-    width: 150px;
-    height: 60px;
-    margin-left: 40px;
-    margin-top: -20px;
+    border-radius: 13px;
+    width: 62px;
+    height: 24px;
+    margin-left: 25px;
+    margin-top: -65px;
     text-align: center;
     font-family: "digital-clock-font";
-    font-size: 90px;
+    font-size: 38px;
     color: red;
-    padding: 0px 0px 40px 0px;
+    padding: 0px 0px 16px 0px;
   }
 .score {
+    position: relative;
     font-family: "digital-clock-font";
-    font-size: 35px;
-    margin-left: 65px;
-    margin-top: 10px;
+    font-size: 18px bold;
+    margin-left: 32px;
+    margin-top: 3px;
     text-align: left;
 }
 .title h1{
@@ -110,3 +118,16 @@ body {
     color: black;
     text-shadow: 10px 10px 0 green, 20px 20px 0 red, 30px 30px 0 #ffd217, 40px 40px 0 blue;
 }
+.startButton {
+    display: inline-block;
+    position: relative;
+    margin: 85px 0 0 75px;
+    width : 60px;
+    height : 60px;
+    background-color : red;
+    border-radius : 100%;
+    border : 8px solid black;
+    box-shadow : 0px 4px 6px #222;
+    top : -5px;
+    text-align: center;
+  }

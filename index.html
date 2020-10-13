@@ -8,26 +8,32 @@
 </head>
 <body>
     <div class = "title"> <h1>Simon</h1></div>
-    <div class = "scoreColumn">
-        <div class = "scoreBoard">00</div>
-        <div class = "score">SCORE</div>
-
-
-
+    
+    
+    
+</div>
+<div class = "cantClick" id = "container">
+    <div class = row1>
+        <div class = "buttons green" onclick="addSequence(this)" data-button="green"></div>
+        <div class = "buttons red" onclick="addSequence(this)" data-button="red"></div>
     </div>
-        <div class = "cantClick" id = "container">
-            <div class = row1>
-                <div class = "buttons green" onclick="addSequence(this)" data-button="green"></div>
-                <div class = "buttons red" onclick="addSequence(this)" data-button="red"></div>
-            </div>
-            <div class = row2>
-                <div class = "buttons yellow" onclick="addSequence(this)" data-button="yellow"></div>
-                <div class = "buttons blue" onclick="addSequence(this)" data-button="blue"></div>
-            </div>
-            <div class = "middle"></div>
+    <div class = row2>
+        <div class = "buttons yellow" onclick="addSequence(this)" data-button="yellow"></div>
+        <div class = "buttons blue" onclick="addSequence(this)" data-button="blue"></div>
+    </div>
+    
+    <div class = "middle">
+        <div class ="startButton click">
+            <h3>Start</h3>
         </div>
-
-        <button class ="start"> Start Game</button>
+        <div class = "scoreColumn">
+            <div class = "scoreBoard">00</div>
+            <div class = "score">SCORE</div>
+        </div>
+            
+            
+        </div>
+        
         
     <script src="script.js"></script>
 </body>

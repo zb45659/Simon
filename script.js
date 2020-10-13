@@ -3,7 +3,7 @@
 // let yellow = document.getElementByClassName("yellow");
 // let blue = document.getElementByClassName("blue");
 let container = document.querySelector("#container");
-let startButton = document.querySelector(".start");
+let startButton = document.querySelector(".startButton");
 let level = 0;
 let userSequence = [];
 let nextSequence = [];
@@ -15,7 +15,7 @@ function resetGame() {
     userSequence = [];
     nextSequence = [];
     level = 0;
-    container.classList.add("cantClick");
+    container.setAttribute("class","cantClick");
 }
 
 
@@ -78,7 +78,7 @@ function nextLevel() {
     // if (JSON.stringify(userSequence) == JSON.stringify(nextSequence)) {
         level += 1;
         scoreBoard.textContent = level;
-        container.classList.add("cantClick");
+        container.setAttribute("class","cantClick");
         userSequence = [];
         //array used to store current sequence + new Sequence
         nextSequence.push(randomStep());
