@@ -35,3 +35,11 @@
   - Adding API to JS would allow highscore that is not stored only to local browser
 - **Incorporate Levels(Gold)** Have different levels with varrying speed (no)
 - **Change Layout(Gold)** Allow user to change css layout of board (no)
+
+# Game Access
+
+[Game Link](https://condescending-carson-085219.netlify.app/)
+
+![alt text](browser.jpg)
+
+
