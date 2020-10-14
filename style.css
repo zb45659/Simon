@@ -1,3 +1,10 @@
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    scroll: none;
+}
+
 body {
     background-color: tan;
     text-align: center;
@@ -7,7 +14,7 @@ body {
     text-align: center;
     font-family: "League-Gothic", Courier;
     font-size: 175px;
-    margin: 0 150px 50px 0;
+    margin: 0 400px 75px 0;
     text-transform: uppercase;
     color: black;
     text-shadow: 10px 10px 0 green, 20px 20px 0 red, 30px 30px 0 #ffd217, 40px 40px 0 blue;
@@ -76,7 +83,7 @@ body {
     position: relative;
     width: 600px;
     height: 600px;
-    margin: 0px 120px 0px 0px;
+    margin: 0px 400px 0px 0px;
     border-radius: 100%;
     background-color: black;
 }
@@ -142,4 +149,128 @@ body {
   .reset {
     background-color: yellow;
     margin: 0 0 0 15px;
+  }
+  .rightColumn {
+    position: absolute;
+    height:100%;
+    top: 250px;
+    right: 60px;
+    text-align: center;
+    white-space: nowrap;
+    
+}
+  .highScore {
+      vertical-align: middle;
+      display: inline-block;
+      Margin: 50px 0 0 0;
+  }
+
+  .nameColumn {
+      vertical-align: middle;
+      display: inline-block;
+      padding-top: 25px;
+      background-color: beige;
+      width: 600px;
+      height: 460px;
+      box-shadow:
+      inset green 0 0 0 5px, 
+  inset black 0 0 0 1px, 
+  inset red 0 0 0 10px, 
+  inset black 0 0 0 11px, 
+  inset yellow 0 0 0 16px, 
+  inset black 0 0 0 17px, 
+  inset blue 0 0 0 21px, 
+  inset black 0 0 0 22px
+}
+.high-score {
+    position: absolute;
+    text-align: center;
+    font-family: "League-Gothic", Courier;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: red;
+    text-shadow: 3px 3px 0 green;
+}
+.block{
+  width: 525px;  
+  height: 60px;
+  margin: 25px 10px 25px 10px;
+  background-color: blue;
+  border: 8px solid yellow;
+  box-shadow : 0px 8px 12px #222;
+}
+
+#demo{
+    position: relative;
+}
+
+#demo:before {
+    position: absolute;
+	content: "";
+	bottom: 20px;
+	left: 8px;
+	right: 8px;
+	top: 20px;
+	background: #777;
+	-webkit-box-shadow: 0 0 30px 10px #486685;
+	-moz-box-shadow: 0 0 30px 10px #486685;
+	box-shadow: 0 0 30px 10px #486685;
+	border-radius:10px/40px;
+}
+
+#name-button {
+    font-size: 2em;
+    height: 50px;
+    width: 120px;
+    border-radius: 20%;
+    background: green;
+    color: black;
+    border: 0.25rem solid red;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow : 0px 8px 12px #222;
+  }
+#name-button:hover {
+    color: yellow;
+  }
+#name-button::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+  }
+#name-button:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+  }
+#name-button::after {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+  }
+
+  #name-title {
+    text-align: center;
+    font-family: "League-Gothic", Courier;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: blue;
+    text-shadow: 2px 2px 0px yellow, 3px 3px 0px black;
+  }
+
+  #high-score-txt{
+    text-align: center;
+    font-family: "League-Gothic", Courier;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: black;
+    text-shadow: 3px 3px 0 #ffd217, 5px 5px 0 blue, 7px 7px 0 red, 9px 9px 0 green;
   }
